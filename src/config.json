@@ -1,0 +1,8 @@
+{
+    "webMapItemId":"fda2f73f1f3a49568d370c6b41fd108f",
+    "HealthCareFacilitiesLayreUrl": "https://livingatlas.esri.in/server1/rest/services/Health/IN_HealthcareFacility/MapServer/0/query",
+    "boundaryLayerTitle": "IND Boundaries 2022",
+    "healthCareFacilitiesLayerTitle": "Healthcare Facility",
+    "DistrictLayerTitle": "Districts",
+    "StateLayerTitle": "States"
+  }

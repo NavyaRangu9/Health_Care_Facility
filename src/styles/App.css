@@ -1,0 +1,221 @@
+:root {
+  --primary-purple: #6a1b9a;
+  --light-purple: #9c4dcc;
+  --white: #ffffff;
+  --header-height: 30px;  /* Define explicit header height */
+  --font-family: 'Poppins', sans-serif;
+}
+* {
+  font-family: var(--font-family);
+}
+
+.HealthCareApp {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: fixed; /* Fix the entire app to viewport */
+  top: 0;
+  left: 0;
+}
+
+.Header {
+    background-color: var(--primary-purple);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    height: var(--header-height);
+    /* min-height: var(--header-height); */
+    flex: 0 0 auto;
+}
+.headerTitle {
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.mapContainer {
+    height: calc(100vh - var(--header-height)); /* Explicitly calculate remaining height */
+    width: 100%;
+    position: relative;
+}
+
+.mapComponent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Changed from 100px to 100% */
+    display: flex; /* Add flex display */
+}
+.headerContainer{
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+.filterSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.buttonSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    /* margin-left: 10px; */
+}
+.filterDropDown {
+  width: 100px;
+  height: 30px;
+  border: 0px !important;
+  margin: 0px 10px 0px 5px;
+  border-radius: 3px;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+}
+.filterButtons {
+  width: 75px;
+  height: 30px;
+  background-color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.filterButtons:hover {
+  background-color: var(--light-purple);
+  color: var(--white);
+}
+label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.ftDropDown{
+    width: 115px;
+}
+
+/* buffer tool */
+
+
+.bufferWidgetContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row-reverse; /* Change direction to reverse */
+  gap: 10px;
+  align-items: flex-start;
+}
+.bufferToggleButton {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.bufferPanel {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding: 15px;
+  width: 250px;
+  margin-right: 10px; /* Add margin between panel and button */
+}
+
+.bufferPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.bufferPanelHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--primary-purple);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton:hover {
+  color: var(--primary-purple);
+}
+
+.bufferControls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bufferInputs {
+  display: flex;
+  gap: 10px;
+}
+
+.bufferInputs select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.bufferActions {
+  display: flex;
+  gap: 10px;
+}
+
+.bufferButton {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-purple);
+  color: white;
+  cursor: pointer;
+}
+
+.bufferButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bufferButton.active {
+  background-color: var(--light-purple);
+}
+.locationIcon {
+  font-size: 20px;
+  color: var(--primary-purple);
+  z-index: 2;
+}
+.bufferToggleButton:hover .locationIcon {
+  color: var(--light-purple);
+}
